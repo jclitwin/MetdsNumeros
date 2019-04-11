@@ -1,6 +1,8 @@
 ﻿using MtdNumerico.Bisseccao;
+using MtdNumerico.Newton_Raphson;
 using MtdNumerico.PontoFixo;
 using MtdNumerico.PosicaoFalsa;
+using MtdNumerico.Secante;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,6 +43,18 @@ namespace MtdNumerico
         private void button4_Click(object sender, EventArgs e)
         {
             MetodoPontoFixoForm dnForm = new MetodoPontoFixoForm();
+            dnForm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MetodoNewtonRaphsonForm dnForm = new MetodoNewtonRaphsonForm();
+            dnForm.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MetodoSecantesForm dnForm = new MetodoSecantesForm();
             dnForm.Show();
         }
     }

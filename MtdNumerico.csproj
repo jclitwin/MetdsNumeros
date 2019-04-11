@@ -67,6 +67,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Newton-Raphson\MetodoNewtonRaphson.cs" />
+    <Compile Include="Newton-Raphson\MetodoNewtonRaphsonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newton-Raphson\MetodoNewtonRaphsonForm.Designer.cs">
+      <DependentUpon>MetodoNewtonRaphsonForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PontoFixo\MetodoPontoFixo.cs" />
     <Compile Include="PontoFixo\MetodoPontoFixoForm.cs">
       <SubType>Form</SubType>
@@ -83,6 +90,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Secante\MetodoSecantes.cs" />
+    <Compile Include="Secante\MetodoSecantesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secante\MetodoSecantesForm.Designer.cs">
+      <DependentUpon>MetodoSecantesForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bisseccao\MetodoBisseccaoForm.resx">
       <DependentUpon>MetodoBisseccaoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newton-Raphson\MetodoNewtonRaphsonForm.resx">
+      <DependentUpon>MetodoNewtonRaphsonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PontoFixo\MetodoPontoFixoForm.resx">
       <DependentUpon>MetodoPontoFixoForm.cs</DependentUpon>
@@ -108,6 +125,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Secante\MetodoSecantesForm.resx">
+      <DependentUpon>MetodoSecantesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
