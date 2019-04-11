@@ -42,7 +42,7 @@ namespace MtdNumerico.PosicaoFalsa
                 return;
             }
 
-            for (int i = 0; ; i++)
+            for (int i = 0; i < 7; i++)
             {
                 ListViewItem lvi = new ListViewItem();
 
@@ -51,15 +51,19 @@ namespace MtdNumerico.PosicaoFalsa
                 lvi.SubItems.Add(inter_b.ToString());
 
                 xn = metodoPosicaoFalsa.calcularXN(inter_a, inter_b);
+                xn = metodoPosicaoFalsa.Truncate(xn, 3);
                 lvi.SubItems.Add(xn.ToString());
 
                 funcao_a = metodoPosicaoFalsa.funcao(inter_a);
+                funcao_a = metodoPosicaoFalsa.Truncate(funcao_a, 3);
                 lvi.SubItems.Add(funcao_a.ToString());
 
                 funcao_b = metodoPosicaoFalsa.funcao(inter_b);
+                funcao_b = metodoPosicaoFalsa.Truncate(inter_b, 3);
                 lvi.SubItems.Add(funcao_b.ToString());
 
                 funcao_xn = metodoPosicaoFalsa.funcao(xn);
+                funcao_xn = metodoPosicaoFalsa.Truncate(funcao_xn, 3);
                 lvi.SubItems.Add(funcao_xn.ToString());
 
                 erro = metodoPosicaoFalsa.calcular_erro_absoluto(inter_a, inter_b);

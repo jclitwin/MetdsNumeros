@@ -34,17 +34,17 @@ namespace MtdNumerico.Newton_Raphson
 
             MetodoNewtonRaphson metodoPontoFixo = new MetodoNewtonRaphson();
 
-            if (metodoPontoFixo.verificar_raiz_intervalo(intervalo_a, intervalo_b) == false)
-            {
-                MessageBox.Show("Não há raiz!");
-                return;
-            }
+            //if (metodoPontoFixo.verificar_raiz_intervalo(intervalo_a, intervalo_b) == false)
+            //{
+            //    MessageBox.Show("Não há raiz!");
+            //    return;
+            //}
 
             double xn = x0;
             double funcao_xn_n = 0;
             double funcao_xn_n_plus_1 = 0;
 
-            for (int i = 0; ; i++)
+            for (int i = 0; i < 7; i++)
             {
                 ListViewItem lvi = new ListViewItem();
 
@@ -52,9 +52,11 @@ namespace MtdNumerico.Newton_Raphson
                 lvi.SubItems.Add(xn.ToString());
 
                 funcao_xn_n = metodoPontoFixo.funcao(xn);
+                funcao_xn_n = metodoPontoFixo.Truncate(funcao_xn_n, 3);
                 lvi.SubItems.Add(funcao_xn_n.ToString());
 
                 funcao_xn_n_plus_1 = metodoPontoFixo.funcao_xn_plus_1(xn);
+                funcao_xn_n_plus_1 = metodoPontoFixo.Truncate(funcao_xn_n_plus_1, 3);
                 lvi.SubItems.Add(funcao_xn_n_plus_1.ToString());
 
                 xn = funcao_xn_n_plus_1;

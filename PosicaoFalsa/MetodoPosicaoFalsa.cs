@@ -14,7 +14,14 @@ namespace MtdNumerico.PosicaoFalsa
             //return Math.Pow(x, 2) - 3;
             //return Math.Pow(x, 3) - 9 * x + 3;
 
-            return Math.Cos(x) * Math.Pow(x, 2) - x;
+            //return Math.Cos(x) * Math.Pow(x, 2) - x;
+            return Math.Pow(2, x) + Math.Pow(x, 2) - 2;
+        }
+
+        public double Truncate(double value, int digits)
+        {
+            double mult = System.Math.Pow(10.0, digits);
+            return System.Math.Truncate(value * mult) / mult;
         }
 
         private double raizintervalo(double x)

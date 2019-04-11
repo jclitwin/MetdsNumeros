@@ -183,6 +183,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(73, 49);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 5;
             // 
@@ -199,6 +200,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(73, 23);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 3;
             // 

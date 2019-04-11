@@ -20,7 +20,7 @@ namespace MtdNumerico
             textBox3.Text = string.Format("6");
         }
 
-        static double Truncate(double value, int digits)
+        public double Truncate(double value, int digits)
         {
             double mult = System.Math.Pow(10.0, digits);
             return System.Math.Truncate(value * mult) / mult;

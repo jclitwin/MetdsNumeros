@@ -55,6 +55,7 @@ namespace MtdNumerico.Secante
                 x2 = metodoSecantes.calcular_secante(x0, x1);
                 lvi.SubItems.Add(x2.ToString());
 
+                double absTest = Math.Abs(error);
                 if (Math.Abs(error) < funcao_xn)
                 {
                     textBox4.Text = x0.ToString();
