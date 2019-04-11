@@ -12,7 +12,9 @@ namespace MtdNumerico.PosicaoFalsa
         public double funcao(double x)
         {
             //return Math.Pow(x, 2) - 3;
-            return Math.Pow(x, 3) - 9 * x + 3;
+            //return Math.Pow(x, 3) - 9 * x + 3;
+
+            return Math.Cos(x) * Math.Pow(x, 2) - x;
         }
 
         private double raizintervalo(double x)

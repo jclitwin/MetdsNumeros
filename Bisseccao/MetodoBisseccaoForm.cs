@@ -73,7 +73,7 @@ namespace MtdNumerico.Bisseccao
 
                 listView1.Items.Add(lvi);
 
-                if (erro <= erro_abs || 
+                if ((!string.IsNullOrEmpty(textBox1.Text) && erro <= erro_abs) ||
                     (!string.IsNullOrEmpty(textBox6.Text) && Math.Abs(funcao_xn) < modulo_funcao_xn))
                 {
                     textBox4.Text = xn.ToString();
