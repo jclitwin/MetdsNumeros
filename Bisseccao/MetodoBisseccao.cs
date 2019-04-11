@@ -48,5 +48,10 @@ namespace MtdNumerico.Bisseccao
         {
             return intervalo_b - intervalo_a;
         }
+
+        public double estimar_quantidade_iteracoes(double intervalo_a, double intervalo_b, double erro)
+        {
+            return ((Math.Log(intervalo_b - intervalo_a)) - Math.Log(erro)) / Math.Log(2);
+        }
     }
 }

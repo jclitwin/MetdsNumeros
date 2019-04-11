@@ -73,7 +73,11 @@ namespace MtdNumerico.Bisseccao
                 listView1.Items.Add(lvi);
 
                 if (erro <= erro_abs)
+                {
+                    textBox4.Text = xn.ToString();
+                    textBox5.Text = metodoBisseccao.estimar_quantidade_iteracoes(intervalo_a, intervalo_b, erro_abs).ToString();
                     break;
+                }
             }
         }
     }
