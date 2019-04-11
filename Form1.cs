@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MtdNumerico.Bisseccao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,12 @@ namespace MtdNumerico
         private void button1_Click(object sender, EventArgs e)
         {
             DerivadaNumericaForm dnForm = new DerivadaNumericaForm();
+            dnForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MetodoBisseccaoForm dnForm = new MetodoBisseccaoForm();
             dnForm.Show();
         }
     }
