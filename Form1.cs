@@ -1,4 +1,5 @@
 ﻿using MtdNumerico.Bisseccao;
+using MtdNumerico.PontoFixo;
 using MtdNumerico.PosicaoFalsa;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,12 @@ namespace MtdNumerico
         private void button3_Click(object sender, EventArgs e)
         {
             MetodoPosicaoFalsaForm dnForm = new MetodoPosicaoFalsaForm();
+            dnForm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MetodoPontoFixoForm dnForm = new MetodoPontoFixoForm();
             dnForm.Show();
         }
     }

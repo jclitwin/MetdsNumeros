@@ -67,6 +67,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PontoFixo\MetodoPontoFixo.cs" />
+    <Compile Include="PontoFixo\MetodoPontoFixoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PontoFixo\MetodoPontoFixoForm.Designer.cs">
+      <DependentUpon>MetodoPontoFixoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PosicaoFalsa\MetodoPosicaoFalsa.cs" />
     <Compile Include="PosicaoFalsa\MetodoPosicaoFalsaForm.cs">
       <SubType>Form</SubType>
@@ -84,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PontoFixo\MetodoPontoFixoForm.resx">
+      <DependentUpon>MetodoPontoFixoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PosicaoFalsa\MetodoPosicaoFalsaForm.resx">
       <DependentUpon>MetodoPosicaoFalsaForm.cs</DependentUpon>
