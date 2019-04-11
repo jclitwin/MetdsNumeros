@@ -24,6 +24,7 @@ namespace MtdNumerico.Bisseccao
             double.TryParse(textBox1.Text, out double erro_abs);
             double.TryParse(textBox2.Text, out double intervalo_a);
             double.TryParse(textBox3.Text, out double intervalo_b);
+            double.TryParse(textBox6.Text, out double modulo_funcao_xn);
 
             MetodoBisseccao metodoBisseccao = new MetodoBisseccao();
 
@@ -72,13 +73,84 @@ namespace MtdNumerico.Bisseccao
 
                 listView1.Items.Add(lvi);
 
-                if (erro <= erro_abs)
+                if (erro <= erro_abs || 
+                    (!string.IsNullOrEmpty(textBox6.Text) && Math.Abs(funcao_xn) < modulo_funcao_xn))
                 {
                     textBox4.Text = xn.ToString();
                     textBox5.Text = metodoBisseccao.estimar_quantidade_iteracoes(intervalo_a, intervalo_b, erro_abs).ToString();
                     break;
                 }
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
