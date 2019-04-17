@@ -51,19 +51,19 @@ namespace MtdNumerico.PosicaoFalsa
                 lvi.SubItems.Add(inter_b.ToString());
 
                 xn = metodoPosicaoFalsa.calcularXN(inter_a, inter_b);
-                xn = metodoPosicaoFalsa.Truncate(xn, 3);
+                xn = metodoPosicaoFalsa.Truncate(xn, 5);
                 lvi.SubItems.Add(xn.ToString());
 
                 funcao_a = metodoPosicaoFalsa.funcao(inter_a);
-                funcao_a = metodoPosicaoFalsa.Truncate(funcao_a, 3);
+                funcao_a = metodoPosicaoFalsa.Truncate(funcao_a, 5);
                 lvi.SubItems.Add(funcao_a.ToString());
 
                 funcao_b = metodoPosicaoFalsa.funcao(inter_b);
-                funcao_b = metodoPosicaoFalsa.Truncate(inter_b, 3);
+                funcao_b = metodoPosicaoFalsa.Truncate(inter_b, 5);
                 lvi.SubItems.Add(funcao_b.ToString());
 
                 funcao_xn = metodoPosicaoFalsa.funcao(xn);
-                funcao_xn = metodoPosicaoFalsa.Truncate(funcao_xn, 3);
+                funcao_xn = metodoPosicaoFalsa.Truncate(funcao_xn, 5);
                 lvi.SubItems.Add(funcao_xn.ToString());
 
                 erro = metodoPosicaoFalsa.calcular_erro_absoluto(inter_a, inter_b);
