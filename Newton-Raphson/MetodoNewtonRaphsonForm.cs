@@ -21,8 +21,6 @@ namespace MtdNumerico.Newton_Raphson
         {
             listView1.Items.Clear();
 
-            double.TryParse(textBox2.Text, out double intervalo_a);
-            double.TryParse(textBox3.Text, out double intervalo_b);
             double.TryParse(textBox1.Text, out double x0);
             double.TryParse(textBox6.Text, out double modulo_funcao_xn);
 
@@ -32,13 +30,7 @@ namespace MtdNumerico.Newton_Raphson
                 return;
             }
 
-            MetodoNewtonRaphson metodoPontoFixo = new MetodoNewtonRaphson();
-
-            //if (metodoPontoFixo.verificar_raiz_intervalo(intervalo_a, intervalo_b) == false)
-            //{
-            //    MessageBox.Show("Não há raiz!");
-            //    return;
-            //}
+            MetodoNewtonRaphson newtonRaphson = new MetodoNewtonRaphson();
 
             double xn = x0;
             double funcao_xn_n = 0;
@@ -51,12 +43,12 @@ namespace MtdNumerico.Newton_Raphson
                 lvi.Text = i.ToString();
                 lvi.SubItems.Add(xn.ToString());
 
-                funcao_xn_n = metodoPontoFixo.funcao(xn);
-                funcao_xn_n = metodoPontoFixo.Truncate(funcao_xn_n, 3);
+                funcao_xn_n = newtonRaphson.funcao(xn);
+                funcao_xn_n = newtonRaphson.Truncate(funcao_xn_n, 5);
                 lvi.SubItems.Add(funcao_xn_n.ToString());
 
-                funcao_xn_n_plus_1 = metodoPontoFixo.funcao_xn_plus_1(xn);
-                funcao_xn_n_plus_1 = metodoPontoFixo.Truncate(funcao_xn_n_plus_1, 3);
+                funcao_xn_n_plus_1 = newtonRaphson.funcao_xn_plus_1(xn);
+                funcao_xn_n_plus_1 = newtonRaphson.Truncate(funcao_xn_n_plus_1, 5);
                 lvi.SubItems.Add(funcao_xn_n_plus_1.ToString());
 
                 xn = funcao_xn_n_plus_1;
@@ -65,7 +57,8 @@ namespace MtdNumerico.Newton_Raphson
 
                 if (Math.Abs(funcao_xn_n) < modulo_funcao_xn)
                 {
-                    textBox4.Text = xn.ToString();
+                    //textBox4.Text = xn.ToString();
+                    textBox4.Text = newtonRaphson.Truncate(newtonRaphson.newton(modulo_funcao_xn, x0), 5).ToString();
                     break;
                 }
             }

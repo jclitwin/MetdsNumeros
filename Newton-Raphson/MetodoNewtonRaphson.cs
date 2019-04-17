@@ -11,30 +11,19 @@ namespace MtdNumerico.Newton_Raphson
         // Apenas essas funções são necessarias mudar.
         public double funcao(double x)
         {
-            //return (Math.Pow(x, 3) - (9 * x)) + 3;
-            //return Math.Pow(2, x) + Math.Pow(x, 2) - 2;
-
-            //return Math.Pow(x, 3) + Math.Pow(3, x) - 2;
-
-            return Math.Pow(x, 3) - 9 * x + 3;
+            return Math.Pow(2, x) + Math.Pow(x, 2) - 2;
         }
 
         public double funcao_derivada(double x)
         {
-            //return (3 * (Math.Pow(x, 2))) - 9;
-            //return 2 * x + Math.Log(2) * Math.Pow(2, x);
-
-            //return 3 * Math.Pow(x, 2) + Math.Log(3) * Math.Pow(3, x);
-            return 3 * Math.Pow(x, 2) - 9;
+            return 2 * x + Math.Log(2) * Math.Pow(2, x);
         }
 
         public double Truncate(double value, int digits)
         {
-            return value;
-            //double mult = System.Math.Pow(10.0, digits);
-            //return System.Math.Truncate(value * mult) / mult;
+            double mult = System.Math.Pow(10.0, digits);
+            return System.Math.Truncate(value * mult) / mult;
         }
-
 
         public double funcao_xn_plus_1(double x)
         {
@@ -46,6 +35,18 @@ namespace MtdNumerico.Newton_Raphson
             var a = funcao(intervalo_a);
             var b = funcao(intervalo_b);
             return ((a * b) > 0) ? false : true;
+        }
+
+        public double newton(double error, double x0)
+        {
+            for(; ; )
+            {
+                double x1 = x0 - (funcao(x0) / funcao_derivada(x0));
+                if (Math.Abs(funcao(x1)) < error)
+                    return x1;
+                else
+                    x0 = x1;
+            }
         }
     }
 }
